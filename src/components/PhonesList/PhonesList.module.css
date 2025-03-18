@@ -1,0 +1,91 @@
+.phonesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  justify-content: center;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.phoneCard {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.phoneCard::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: black;
+  transition: height 1s cubic-bezier(0.2, 0.9, 0.3, 1);
+  z-index: 0;
+}
+
+.phoneCard:hover::after,
+.phoneCard:focus::after {
+  background-color: #000;
+  height: 100%;
+}
+
+/* .imageContainer {
+  width: 150px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: transparent;
+} */
+
+.imageContainer {
+  width: 150px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  background-color: red;
+}
+
+.phoneCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  z-index: 20;
+  background-color: blue;
+  /* TODO definir tamaño visible de la imagen */
+}
+
+.phoneBrand {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #635353d8;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.phoneName {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+
+.phonePrice {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}

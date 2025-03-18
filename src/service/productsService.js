@@ -25,6 +25,23 @@ const getAll = () => {
     })
 }
 
+const queryPhones = async (query = "") => {
+  try {
+    const allPhones = await getAll();
+
+    const filteredPhones = allPhones.filter((phone) =>
+      phone.name.toLowerCase().includes(query.toLowerCase()) ||
+      phone.brand.toLowerCase().includes(query.toLowerCase())
+    );
+
+    return filteredPhones;
+  } catch (error) {
+    console.error("Error fetching phones:", error);
+    return [];
+  }
+};
+
 export default {
-  getAll
+  getAll,
+  queryPhones,
 }
