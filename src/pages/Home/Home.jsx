@@ -3,6 +3,7 @@ import styles from "./Home.module.css";
 import productsService from "../../service/productsService";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import PhonesList from "../../components/PhonesList/PhonesList";
+import CounterResults from "../../components/CounterResults/CounterResults";
 
 const Home = () => {
   const [phones, setPhones] = useState([]);
@@ -19,6 +20,7 @@ const Home = () => {
   return (
     <div>
       <SearchBar handleSearch={handleSearch} />
+      <CounterResults phones={phones} />
       <PhonesList phones={phones} />
     </div>
   );

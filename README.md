@@ -22,13 +22,13 @@ DevDependencies: Vitest, React testing library
 
 ## 1. Vista Listado de Teléfonos
 
-[-] cuadrícula con tarjetas que muestren los primeros 20 teléfonos: 
+[X] cuadrícula con tarjetas que muestren los primeros 20 teléfonos: 
  - Cada tarjeta deberá incluir imagen, nombre, marca y precio base.
 
-[-] Implementar un buscador en tiempo real que filtre los teléfonos por nombre o marca:
+[X] Implementar un buscador en tiempo real que filtre los teléfonos por nombre o marca:
  - Usar filtrado por API
 
-[-] El buscador debe incluir un indicador con el número de resultados encontrados.
+[X] El buscador debe incluir un indicador con el número de resultados encontrados.
 
 [-] Implementar una barra de navegación que contenga:
  - Un icono con un enlace al panel de inicio.
