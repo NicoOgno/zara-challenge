@@ -1,11 +1,15 @@
 import React from "react";
 import styles from "./PhonesList.module.css";
 
-const PhonesList = ({ phones }) => {
+const PhonesList = ({ phones, handlePhoneDetails }) => {
   return (
     <div className={styles.phonesContainer}>
       {phones.map((phone) => (
-        <div key={phone.id} className={styles.phoneCard}>
+        <div
+          key={phone.id}
+          className={styles.phoneCard}
+          onClick={() => handlePhoneDetails(phone.id)}
+        >
           <div className={styles.imageContainer}>
             <img src={phone.imageUrl} alt={phone.name} />
           </div>

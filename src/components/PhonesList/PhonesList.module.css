@@ -2,8 +2,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   justify-content: center;
-  border-top: 1px solid #000;
-  border-left: 1px solid #000;
+  border-top: 1px solid #0008;
+  border-left: 1px solid #0008;
   background-color: #fff;
   transition: background-color 0.3s ease;
 }
@@ -12,8 +12,8 @@
   position: relative;
   text-align: center;
   padding: 10px;
-  border-bottom: 1px solid #000;
-  border-right: 1px solid #000;
+  border-bottom: 1px solid #0008;
+  border-right: 1px solid #0008;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +39,7 @@
   height: 100%;
 }
 
-/* .imageContainer {
+.imageContainer {
   width: 150px;
   height: 200px;
   display: flex;
@@ -47,18 +47,18 @@
   justify-content: center;
   overflow: hidden;
   background-color: transparent;
-} */
+}
 
-.imageContainer {
+/* .imageContainer {
   width: 150px;
   height: 200px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   display: block;
-  /* TODO eliminar bg-color */
+
   background-color: red;
-}
+} */
 
 .phoneCard img {
   width: 100%;
@@ -66,9 +66,8 @@
   object-fit: contain;
   display: block;
   z-index: 20;
-  /* TODO definir tamaño visible de la imagen */
-  /* TODO eliminar bg-color */
-  background-color: blue;
+
+  /* background-color: blue; */
 }
 
 .phoneBrand {

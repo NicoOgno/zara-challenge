@@ -2,8 +2,8 @@ import styles from "./CounterResults.module.css";
 
 const CounterResults = ({ phones }) => {
   return (
-    <div>
-      <span className={styles.count}>{phones.length} Results</span>
+    <div className={styles.countResults}>
+      <span>{phones.length} Results</span>
     </div>
   );
 };
