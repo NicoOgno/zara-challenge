@@ -1,0 +1,39 @@
+.phoneDetailsContainer {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; */
+  padding: 0.3rem;
+  font-size: 0.7rem;
+}
+.backButton {
+  background-color: transparent;
+  border: none;
+}
+.detailsContainer {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+.phoneImage {
+  width: 80%;
+  max-width: 400px;
+}
+
+.infoContainer {
+  /* width: 100%;
+  text-align: center; */
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 0.9rem;
+  color: #666;
+}
