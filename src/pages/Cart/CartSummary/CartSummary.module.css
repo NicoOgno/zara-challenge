@@ -1,0 +1,42 @@
+.summaryContainer {
+  margin-bottom: 1rem;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.continueShopping {
+  background-color: transparent;
+  color: #000;
+  padding: 10px;
+  border: 1px solid #000;
+  cursor: pointer;
+  width: 12em;
+}
+
+.continueShopping:hover {
+  background: #ccc9;
+}
+
+.payBtn {
+  background: #000;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 12em;
+}
+
+.payBtn:hover {
+  background: #2b29293b;
+}

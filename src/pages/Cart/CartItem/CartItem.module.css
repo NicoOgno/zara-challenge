@@ -1,0 +1,30 @@
+.cartItem {
+  gap: 15px;
+  background: #fff;
+}
+
+.image {
+  width: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  float: left;
+}
+
+.details {
+  flex: 1;
+  margin-top: 2rem;
+}
+
+.price {
+  margin-top: 1rem;
+}
+
+.removeBtn {
+  background-color: transparent;
+  color: #ff0000;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 2rem;
+}

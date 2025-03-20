@@ -1,0 +1,18 @@
+.cartContainer {
+  position: relative;
+  margin: auto;
+  height: 80vh;
+}
+
+.cartContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cartItems {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 28rem;
+}
