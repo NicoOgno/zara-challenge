@@ -5,32 +5,39 @@ const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
-  // Cargar el carrito desde localStorage al iniciar
+  // Cargar carrito desde localStorage al montar el componente
   useEffect(() => {
-    const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
-    setCart(savedCart);
+    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCart(storedCart);
   }, []);
 
-  // Guardar el carrito en localStorage cada vez que cambie
+  // Sincronizar localStorage cada vez que el carrito cambie
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
   const addToCart = (product) => {
-    setCart((prevCart) => [...prevCart, product]);
+    setCart((prevCart) => {
+      const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
+      const updatedCart = [...storedCart, product];
+
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      return updatedCart;
+    });
   };
 
   const removeFromCart = (productId, storage, color) => {
-    setCart((prevCart) =>
-      prevCart.filter(
+    setCart((prevCart) => {
+      const updatedCart = prevCart.filter(
         (item) =>
           !(
             item.id === productId &&
             item.storage === storage &&
             item.color === color
           )
-      )
-    );
+      );
+      return updatedCart;
+    });
   };
 
   return (
