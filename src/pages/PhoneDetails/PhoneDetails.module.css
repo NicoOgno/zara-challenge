@@ -37,3 +37,18 @@
   font-size: 0.9rem;
   color: #666;
 }
+
+.addToCart {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

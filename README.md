@@ -40,21 +40,21 @@ uso de localStorage.
 
 ## 2. Vista Detalle de Teléfono
 Mostrar detalles del teléfono seleccionado, incluyendo:
-[-] Nombre y marca del dispositivo
+[X] Nombre y marca del dispositivo
 
-[-] Imagen grande del móvil, con capacidad de cambiar dinámicamente según el color
+[X] Imagen grande del móvil, con capacidad de cambiar dinámicamente según el color
 seleccionado.
 
-[-] Selectores para almacenamiento y color, con actualización en tiempo real del precio.
+[X] Selectores para almacenamiento y color, con actualización en tiempo real del precio.
 
-[-] Especificaciones técnicas detalladas, precio base y variaciones según almacenamiento.
+[X] Especificaciones técnicas detalladas, precio base y variaciones según almacenamiento.
 
-[-] Un botón "Añadir al carrito" que solo se activará cuando se hayan seleccionado color y
+[X] Un botón "Añadir al carrito" que solo se activará cuando se hayan seleccionado color y
 almacenamiento.
 
 [-] Una sección de "Productos similares" en la parte inferior.
 
-## 3. Vist de Carrito
+## 3. Vista de Carrito
 Mostrar los teléfonos añadidos al carrito, con:
 
 [-] Imagen, nombre, especificaciones seleccionadas (almacenamiento / color) y precio
