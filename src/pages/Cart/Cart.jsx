@@ -6,6 +6,11 @@ const Cart = () => {
   const { cart, removeFromCart } = useCart();
   const navigate = useNavigate();
 
+  const handleRemoveItem = (index) => {
+    const updatedCart = cart.filter((_, i) => i !== index);
+    removeFromCart(updatedCart);
+  };
+
   const totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
 
   return (
@@ -25,9 +30,7 @@ const Cart = () => {
                 </p>
                 <p>{item.price} EUR</p>
                 <button
-                  onClick={() =>
-                    removeFromCart(item.id, item.storage, item.color)
-                  }
+                  onClick={() => handleRemoveItem(index)}
                   className={styles.removeBtn}
                 >
                   Eliminar

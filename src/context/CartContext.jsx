@@ -12,26 +12,11 @@ export const CartProvider = ({ children }) => {
   }, [cart]);
 
   const addToCart = (product) => {
-    setCart((prevCart) => {
-      const updatedCart = [...prevCart, product];
-      localStorage.setItem("cart", JSON.stringify(updatedCart));
-      return updatedCart;
-    });
+    setCart((prevCart) => [...prevCart, product]);
   };
 
-  const removeFromCart = (productId, storage, color) => {
-    setCart((prevCart) => {
-      const updatedCart = prevCart.filter(
-        (item) =>
-          !(
-            item.id === productId &&
-            item.storage === storage &&
-            item.color === color
-          )
-      );
-      localStorage.setItem("cart", JSON.stringify(updatedCart));
-      return updatedCart;
-    });
+  const removeFromCart = (updatedCart) => {
+    setCart(updatedCart);
   };
 
   return (
