@@ -5,13 +5,16 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import PhonesList from "../../components/PhonesList/PhonesList";
 import CounterResults from "../../components/CounterResults/CounterResults";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../../context/CartContext";
 
 const Home = () => {
   const [phones, setPhones] = useState([]);
+  const { setInCartPage } = useCart();
   const navigate = useNavigate();
 
   useEffect(() => {
     productsService.getAll().then((data) => setPhones(data));
+    setInCartPage(false);
   }, []);
 
   const handleSearch = async (query) => {

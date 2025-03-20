@@ -1,10 +1,15 @@
 import { useCart } from "../../context/CartContext";
 import { useNavigate } from "react-router-dom";
 import styles from "./Cart.module.css";
+import { useEffect } from "react";
 
 const Cart = () => {
-  const { cart, removeFromCart } = useCart();
+  const { cart, removeFromCart, setInCartPage } = useCart();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setInCartPage(true);
+  }, []);
 
   const handleRemoveItem = (index) => {
     const updatedCart = cart.filter((_, i) => i !== index);

@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import { useCart } from "../../context/CartContext";
 import styles from "./PhoneDetails.module.css";
 import StorageOptions from "./StorageOptions/StorageOptions";
@@ -9,9 +9,13 @@ import { Link } from "react-router-dom";
 const PhoneDetails = () => {
   const [selectedStorage, setSelectedStorage] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
-  const { addToCart } = useCart();
+  const { addToCart, setInCartPage } = useCart();
   const location = useLocation();
   const phone = location.state?.phoneDetails;
+
+  useEffect(() => {
+    setInCartPage(false);
+  }, []);
 
   if (!phone) return <div>Loading phone details...</div>;
   const disabled = !selectedStorage || !selectedColor;
