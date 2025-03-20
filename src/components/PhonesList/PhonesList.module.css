@@ -39,35 +39,38 @@
   height: 100%;
 }
 
-.imageContainer {
-  width: 150px;
-  height: 200px;
+.imageWrapper {
+  width: 210px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: transparent;
+  background-color: white;
+  padding: 0;
+  margin-bottom: 2em;
 }
 
-/* .imageContainer {
-  width: 150px;
-  height: 200px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-
-  background-color: red;
-} */
-
-.phoneCard img {
+.phoneImage {
   width: 100%;
-  height: 100%;
   object-fit: contain;
-  display: block;
+  /* background-color: white; */
   z-index: 20;
+}
 
-  /* background-color: blue; */
+.phoneCard:nth-child(6) .phoneImage,
+.phoneCard:nth-child(9) .phoneImage,
+.phoneCard:nth-child(10) .phoneImage,
+.phoneCard:nth-child(11) .phoneImage,
+.phoneCard:nth-child(12) .phoneImage,
+.phoneCard:nth-child(13) .phoneImage,
+.phoneCard:nth-child(15) .phoneImage {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.phoneCard:nth-child(11) .phoneImage {
+  max-width: 120%;
+  max-height: 120%;
 }
 
 .phoneBrand {
