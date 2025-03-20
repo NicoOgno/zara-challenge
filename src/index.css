@@ -7,6 +7,7 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
   margin: 1em;
+  letter-spacing: -1px;
 }
 
 .navbarLink {

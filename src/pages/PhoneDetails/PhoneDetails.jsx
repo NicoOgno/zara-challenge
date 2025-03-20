@@ -1,14 +1,15 @@
 import { useLocation } from "react-router-dom";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useCart } from "../../context/CartContext";
 import styles from "./PhoneDetails.module.css";
 import StorageOptions from "./StorageOptions/StorageOptions";
 import ColorOptions from "./ColorOptions/ColorOptions";
+import { Link } from "react-router-dom";
 
 const PhoneDetails = () => {
   const [selectedStorage, setSelectedStorage] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
-  const { addToCart } = useCart(); // Usamos el contexto del carrito
+  const { addToCart } = useCart();
   const location = useLocation();
   const phone = location.state?.phoneDetails;
 
@@ -31,7 +32,9 @@ const PhoneDetails = () => {
 
   return (
     <div className={styles.phoneDetailsContainer}>
-      <button className={styles.backButton}>&lt; &nbsp; BACK</button>
+      <Link className="navbarLink" to="/">
+        <span>&lt; &nbsp; BACK</span>
+      </Link>
       <div className={styles.detailsContainer}>
         <img
           className={styles.phoneImage}
