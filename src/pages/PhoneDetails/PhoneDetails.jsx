@@ -11,6 +11,12 @@ const PhoneDetail = () => {
   const location = useLocation();
   const phone = location.state?.phoneDetails;
 
+  const priceContent = !selectedStorage ? (
+    <p className={styles.price}>From {phone.basePrice} EUR</p>
+  ) : (
+    <p className={styles.price}>{selectedStorage.price} EUR</p>
+  );
+
   if (!phone) return <div>Loading phone details...</div>;
   return (
     <div className={styles.phoneDetailsContainer}>
@@ -27,7 +33,7 @@ const PhoneDetail = () => {
         />
         <div className={styles.infoContainer}>
           <p className={styles.title}>{phone.name}</p>
-          <p className={styles.price}>From {phone.basePrice} EUR</p>
+          {priceContent}
 
           <StorageOptions
             storageOptions={phone.storageOptions}
