@@ -16,6 +16,7 @@ const getAll = () => {
         }
         return acc;
       }, []);
+      console.log(uniqueIDData);
 
       return uniqueIDData.slice(0, 20);
     })

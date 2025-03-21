@@ -6,7 +6,11 @@ const PhonesList = ({ phones, handlePhoneDetails }) => {
     <div className={styles.phonesContainer}>
       {phones.map((phone) => {
         return (
-          <div key={phone.id} className={styles.phoneCard}>
+          <div
+            key={phone.id}
+            className={styles.phoneCard}
+            onClick={() => handlePhoneDetails(phone.id)}
+          >
             <div className={styles.imageWrapper}>
               <img
                 className={styles.phoneImage}
