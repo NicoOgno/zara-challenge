@@ -5,6 +5,7 @@ import styles from "./PhoneDetails.module.css";
 import StorageOptions from "./StorageOptions/StorageOptions";
 import ColorOptions from "./ColorOptions/ColorOptions";
 import { Link } from "react-router-dom";
+import { imgSizeCheck } from "../../utils/imgSizeCheck";
 
 const PhoneDetails = () => {
   const [selectedStorage, setSelectedStorage] = useState(null);
@@ -40,15 +41,17 @@ const PhoneDetails = () => {
         <span>&lt; &nbsp; BACK</span>
       </Link>
       <div className={styles.detailsContainer}>
-        <img
-          className={styles.phoneImage}
-          src={
-            selectedColor
-              ? selectedColor.imageUrl
-              : phone.colorOptions[0].imageUrl
-          }
-          alt={phone.name}
-        />
+        <div className={styles.imageWrapper}>
+          <img
+            className={`${styles.phoneImage} ${imgSizeCheck(phone.id)}`}
+            src={
+              selectedColor
+                ? selectedColor.imageUrl
+                : phone.colorOptions[0].imageUrl
+            }
+            alt={phone.name}
+          />
+        </div>
         <div className={styles.infoContainer}>
           <p className={styles.title}>{phone.name}</p>
           <p className={styles.price}>

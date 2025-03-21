@@ -6,3 +6,15 @@
   margin-top: 1rem;
 }
 /* TODO hacer el hover al button que marque el storage seleccionado */
+
+.btnStorage {
+  width: 80px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  outline: thin solid #6669;
+}
+
+.selected {
+  border: 1px solid #000;
+}

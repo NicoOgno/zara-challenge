@@ -1,16 +1,10 @@
 .phoneDetailsContainer {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px; */
   padding: 0.3rem;
   font-size: 0.7rem;
 }
 
-.detailsContainer {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
+.imageWrapper {
+  width: 210px;
 }
 
 .phoneImage {
@@ -18,13 +12,7 @@
   max-width: 400px;
 }
 
-.infoContainer {
-  /* width: 100%;
-  text-align: center; */
-}
-
 .title {
-  font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-weight: lighter;
   margin-bottom: 1rem;
@@ -48,4 +36,8 @@
 .disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+/* Medium to XL */
+@media screen and (min-width: 768px) {
 }

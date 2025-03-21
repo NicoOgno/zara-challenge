@@ -7,10 +7,22 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
   margin: 1em;
-  letter-spacing: -1px;
 }
 
 .navbarLink {
   text-decoration: none;
   color: #000;
+}
+
+.bigImg {
+  max-width: 80%;
+  max-height: 80%;
+}
+.biggerImg {
+  max-width: 70%;
+  max-height: 70%;
+}
+.littleImg {
+  max-width: 120%;
+  max-height: 120%;
 }

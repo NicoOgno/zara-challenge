@@ -9,13 +9,20 @@ const ColorOptions = ({ colorOptions, selectedColor, setSelectedColor }) => {
         {colorOptions.map((color) => (
           <div key={color.name}>
             <button
-              className={selectedColor === color ? styles.selected : ""}
+              className={
+                selectedColor === color
+                  ? `${styles.selected} ${styles.btnColor}`
+                  : styles.btnColor
+              }
               style={{ backgroundColor: color.hexCode }}
               onClick={() => setSelectedColor(color)}
             />
           </div>
         ))}
       </div>
+      <p className={styles.displaySelectedColor}>
+        {selectedColor ? selectedColor.name : colorOptions[0].name}
+      </p>
     </div>
   );
 };

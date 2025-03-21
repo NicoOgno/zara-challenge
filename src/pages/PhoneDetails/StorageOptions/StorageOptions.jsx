@@ -13,14 +13,11 @@ const StorageOptions = ({
         {storageOptions.map((option) => (
           <button
             key={option.capacity}
-            className={selectedStorage === option ? styles.selected : ""}
-            style={{
-              width: "80px",
-              height: "40px",
-              backgroundColor: "transparent",
-              border: "none",
-              outline: "thin solid #6669",
-            }}
+            className={
+              selectedStorage === option
+                ? `${styles.selected} ${styles.btnStorage}`
+                : styles.btnStorage
+            }
             onClick={() => setSelectedStorage(option)}
           >
             {option.capacity}

@@ -55,25 +55,6 @@
   z-index: 20;
 }
 
-.phoneCard:nth-child(6) .phoneImage,
-.phoneCard:nth-child(9) .phoneImage,
-.phoneCard:nth-child(10) .phoneImage,
-.phoneCard:nth-child(11) .phoneImage,
-.phoneCard:nth-child(12) .phoneImage,
-.phoneCard:nth-child(13) .phoneImage {
-  max-width: 80%;
-  max-height: 80%;
-}
-.phoneCard:nth-child(15) .phoneImage {
-  max-width: 70%;
-  max-height: 70%;
-}
-
-.phoneCard:nth-child(11) .phoneImage {
-  max-width: 120%;
-  max-height: 120%;
-}
-
 .phoneBrand {
   position: absolute;
   bottom: 10px;
