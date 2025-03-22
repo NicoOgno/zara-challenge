@@ -10,6 +10,8 @@ const usePhoneDetails = () => {
       navigate(`/phone-details/${phoneDetails.id}`, {
         state: { phoneDetails },
       });
+
+      window.scrollTo(0, 0);
     } catch (error) {
       console.error("Error handling phone details:", error);
     }
