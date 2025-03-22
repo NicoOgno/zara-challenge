@@ -1,8 +1,9 @@
 import styles from "./PhoneCard.module.css";
 import { imgSizeCheck } from "../../utils/imgSizeCheck";
+import usePhoneDetails from "../../hooks/usePHoneDetails";
 
-const PhoneCard = ({ phone, handlePhoneDetails }) => {
-  console.log("phoneeee", phone, "phoneeee");
+const PhoneCard = ({ phone }) => {
+  const { handlePhoneDetails } = usePhoneDetails();
 
   return (
     <div

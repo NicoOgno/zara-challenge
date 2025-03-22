@@ -4,7 +4,7 @@ import styles from "./Specifications.module.css";
 const Specifications = ({ phone }) => {
   return (
     <div className={styles.specsContainer}>
-      <section className={styles.specSection}>
+      <section>
         <p className={styles.specTitle}>SPECIFICATIONS</p>
         <div className={styles.tableContainer}>
           <table className={styles.specTable}>

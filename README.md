@@ -5,17 +5,13 @@ React + Vite
 
 /src
   /components
-    /Navbar
   /pages
     /Home
     /PhoneDetail
     /Cart
-  /hooks
   /context
   /services
-  /assets
 
-/test-setup
 
 Dependencies: Axios
 DevDependencies: Vitest, React testing library
