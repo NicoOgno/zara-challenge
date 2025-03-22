@@ -1,4 +1,3 @@
-import React from "react";
 import CartNavbar from "../CartNavbar/CartNavbar";
 import LogoNavbar from "../LogoNavbar/LogoNavbar";
 import styles from "./Navbar.module.css";

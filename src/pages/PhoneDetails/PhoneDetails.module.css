@@ -3,6 +3,18 @@
   font-size: 0.7rem;
 }
 
+.detailsSelectionContainer {
+  /* border: 3px solid green; */
+}
+
+.detailsContainer {
+  /* border: 3px solid blue; */
+}
+
+.specsWrapper {
+  margin-top: 5em;
+}
+
 .imageWrapper {
   width: 210px;
 }
@@ -26,8 +38,8 @@
 .addToCart {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
   border: none;
   cursor: pointer;
   width: 100%;
@@ -36,8 +48,4 @@
 .disabled {
   background-color: #ccc;
   cursor: not-allowed;
-}
-
-/* Medium to XL */
-@media screen and (min-width: 768px) {
 }

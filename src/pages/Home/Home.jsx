@@ -32,11 +32,11 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <section className={styles.homeContainer}>
       <SearchBar handleSearch={handleSearch} />
       <CounterResults phones={phones} />
       <PhonesList phones={phones} handlePhoneDetails={handlePhoneDetails} />
-    </div>
+    </section>
   );
 };
 

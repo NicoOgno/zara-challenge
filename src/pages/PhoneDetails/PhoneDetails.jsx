@@ -6,6 +6,7 @@ import StorageOptions from "./StorageOptions/StorageOptions";
 import ColorOptions from "./ColorOptions/ColorOptions";
 import { Link } from "react-router-dom";
 import { imgSizeCheck } from "../../utils/imgSizeCheck";
+import Specifications from "./Specifications/Specifications";
 
 const PhoneDetails = () => {
   const [selectedStorage, setSelectedStorage] = useState(null);
@@ -15,6 +16,8 @@ const PhoneDetails = () => {
   const phone = location.state?.phoneDetails;
 
   useEffect(() => {
+    console.log(phone);
+
     setInCartPage(false);
   }, []);
 
@@ -37,48 +40,58 @@ const PhoneDetails = () => {
 
   return (
     <div className={styles.phoneDetailsContainer}>
-      <Link className="navbarLink" to="/">
-        <span>&lt; &nbsp; BACK</span>
-      </Link>
-      <div className={styles.detailsContainer}>
-        <div className={styles.imageWrapper}>
-          <img
-            className={`${styles.phoneImage} ${imgSizeCheck(phone.id)}`}
-            src={
-              selectedColor
-                ? selectedColor.imageUrl
-                : phone.colorOptions[0].imageUrl
-            }
-            alt={phone.name}
-          />
-        </div>
-        <div className={styles.infoContainer}>
-          <p className={styles.title}>{phone.name}</p>
-          <p className={styles.price}>
-            {selectedStorage
-              ? `${selectedStorage.price} EUR`
-              : `From ${phone.basePrice} EUR`}
-          </p>
+      <section>
+        <div className={styles.detailsSelectionContainer}>
+          <Link className="navbarLink" to="/">
+            <span>&lt; &nbsp; BACK</span>
+          </Link>
 
-          <StorageOptions
-            storageOptions={phone.storageOptions}
-            selectedStorage={selectedStorage}
-            setSelectedStorage={setSelectedStorage}
-          />
-          <ColorOptions
-            colorOptions={phone.colorOptions}
-            selectedColor={selectedColor}
-            setSelectedColor={setSelectedColor}
-          />
+          <div className={styles.detailsContainer}>
+            <div className={styles.imageWrapper}>
+              <img
+                className={`${styles.phoneImage} ${imgSizeCheck(phone.id)}`}
+                src={
+                  selectedColor
+                    ? selectedColor.imageUrl
+                    : phone.colorOptions[0].imageUrl
+                }
+                alt={phone.name}
+              />
+            </div>
+            <div className={styles.infoContainer}>
+              <p className={styles.title}>{phone.name}</p>
+              <p className={styles.price}>
+                {selectedStorage
+                  ? `${selectedStorage.price} EUR`
+                  : `From ${phone.basePrice} EUR`}
+              </p>
 
-          <button
-            className={`${styles.addToCart} ${disabled ? styles.disabled : ""}`}
-            onClick={handleAddToCart}
-            disabled={disabled}
-          >
-            AÑADIR
-          </button>
+              <StorageOptions
+                storageOptions={phone.storageOptions}
+                selectedStorage={selectedStorage}
+                setSelectedStorage={setSelectedStorage}
+              />
+              <ColorOptions
+                colorOptions={phone.colorOptions}
+                selectedColor={selectedColor}
+                setSelectedColor={setSelectedColor}
+              />
+
+              <button
+                className={`${styles.addToCart} ${
+                  disabled ? styles.disabled : ""
+                }`}
+                onClick={handleAddToCart}
+                disabled={disabled}
+              >
+                AÑADIR
+              </button>
+            </div>
+          </div>
         </div>
+      </section>
+      <div className={styles.specsWrapper}>
+        <Specifications phone={phone} />
       </div>
     </div>
   );

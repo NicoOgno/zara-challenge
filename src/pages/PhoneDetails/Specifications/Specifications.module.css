@@ -1,0 +1,36 @@
+.specsContainer {
+  /* padding: 1rem; */
+  font-family: Arial, sans-serif;
+}
+
+.specSection {
+}
+
+.specTitle {
+  font-size: 1.2rem;
+  margin-bottom: 1.3rem;
+}
+
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.specTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.6rem;
+}
+
+.tableRow {
+  border-bottom: 1px solid #000;
+}
+
+.specLabel {
+  text-transform: uppercase;
+  width: 45%;
+}
+
+.specValue {
+  padding: 2em 0;
+}
