@@ -7,7 +7,9 @@ const usePhoneDetails = () => {
   const handlePhoneDetails = async (phoneID) => {
     try {
       const phoneDetails = await productsService.getPhone(phoneID);
-      navigate(`/phone-details`, { state: { phoneDetails } });
+      navigate(`/phone-details/${phoneDetails.id}`, {
+        state: { phoneDetails },
+      });
     } catch (error) {
       console.error("Error handling phone details:", error);
     }

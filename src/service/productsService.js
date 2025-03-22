@@ -1,4 +1,5 @@
 import axios from "axios";
+import filterUniqueByID from "../utils/filterByID";
 
 const BASE_URL = import.meta.env.VITE_BASE_URL
 const API_KEY = import.meta.env.VITE_API_KEY
@@ -9,13 +10,7 @@ const getAll = () => {
       headers: { "x-api-key": API_KEY }
     })
     .then((response) => {
-      //Filtrar data por ID
-      const uniqueIDData = response.data.reduce((acc, item) => {
-        if (!acc.some((existingItem) => existingItem.id === item.id)) {
-          acc.push(item);
-        }
-        return acc;
-      }, []);
+      const uniqueIDData = filterUniqueByID(response.data)
 
       return uniqueIDData.slice(0, 20);
     })
@@ -46,7 +41,8 @@ const getPhone = async (id) => {
     const response = await axios.get(`${BASE_URL}/${id}`, {
       headers: { "x-api-key": API_KEY },
     });
-    return response.data;
+
+    return response.data
   } catch (error) {
     console.error("Error fetching phone details:", error);
     throw error;
