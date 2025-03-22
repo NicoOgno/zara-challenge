@@ -11,10 +11,6 @@
   /* border: 3px solid blue; */
 }
 
-.specsWrapper {
-  margin-top: 5em;
-}
-
 .imageWrapper {
   width: 210px;
 }
@@ -48,4 +44,9 @@
 .disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+.carouselWrapper,
+.specsWrapper {
+  margin-top: 7em;
 }

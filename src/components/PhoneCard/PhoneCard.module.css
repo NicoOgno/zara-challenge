@@ -1,0 +1,89 @@
+.phoneCard {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #0008;
+  border-right: 1px solid #0008;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100%;
+}
+
+.phoneCard::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: #000;
+  transition: height 1s cubic-bezier(0.2, 0.9, 0.3, 1);
+  z-index: 0;
+}
+
+.phoneCard:hover::after,
+.phoneCard:focus::after {
+  height: 100%;
+}
+
+.imageWrapper {
+  width: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: white;
+  padding: 0;
+  margin-bottom: 2em;
+}
+
+.phoneImage {
+  width: 100%;
+  object-fit: contain;
+  z-index: 20;
+}
+
+.phoneBrand {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #635353d8;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.phoneName {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+
+.phonePrice {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
+
+.phoneCard:hover::after,
+.phoneCard:focus::after {
+  height: 100%;
+}
+
+.phoneBrand,
+.phoneName,
+.phonePrice {
+  transition: color 0.9s ease;
+  z-index: 10;
+  opacity: 1;
+}
+
+.phoneCard:hover .phoneName,
+.phoneCard:hover .phonePrice {
+  color: #fff;
+}
+.phoneCard:hover .phoneBrand {
+  color: #635353d8;
+}

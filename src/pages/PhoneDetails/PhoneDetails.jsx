@@ -7,6 +7,7 @@ import ColorOptions from "./ColorOptions/ColorOptions";
 import { Link } from "react-router-dom";
 import { imgSizeCheck } from "../../utils/imgSizeCheck";
 import Specifications from "./Specifications/Specifications";
+import Carousel from "./Carousel/Carousel";
 
 const PhoneDetails = () => {
   const [selectedStorage, setSelectedStorage] = useState(null);
@@ -16,8 +17,6 @@ const PhoneDetails = () => {
   const phone = location.state?.phoneDetails;
 
   useEffect(() => {
-    console.log(phone);
-
     setInCartPage(false);
   }, []);
 
@@ -92,6 +91,9 @@ const PhoneDetails = () => {
       </section>
       <div className={styles.specsWrapper}>
         <Specifications phone={phone} />
+      </div>
+      <div className={styles.carouselWrapper}>
+        <Carousel phone={phone} />
       </div>
     </div>
   );
