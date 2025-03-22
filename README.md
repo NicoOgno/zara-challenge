@@ -5,12 +5,14 @@ React + Vite
 
 /src
   /components
+  /context
+  /hooks
   /pages
     /Home
     /PhoneDetail
     /Cart
-  /context
   /services
+  /utils
 
 
 Dependencies: Axios
@@ -26,13 +28,13 @@ DevDependencies: Vitest, React testing library
 
 [X] El buscador debe incluir un indicador con el número de resultados encontrados.
 
-[-] Implementar una barra de navegación que contenga:
+[X] Implementar una barra de navegación que contenga:
  - Un icono con un enlace al panel de inicio.
  - Un icono que muestre la cantidad de teléfonos en el carrito.
  - El carrito debe de ser persistente, se puede manejar su estado haciendo
 uso de localStorage.
 
-[-] Al hacer clic en un teléfono, deberá redirigir a la vista de detalle del mismo.
+[X] Al hacer clic en un teléfono, deberá redirigir a la vista de detalle del mismo.
 
 ## 2. Vista Detalle de Teléfono
 Mostrar detalles del teléfono seleccionado, incluyendo:
@@ -48,24 +50,22 @@ seleccionado.
 [X] Un botón "Añadir al carrito" que solo se activará cuando se hayan seleccionado color y
 almacenamiento.
 
-[-] Una sección de "Productos similares" en la parte inferior.
+[X] Una sección de "Productos similares" en la parte inferior.
 
 ## 3. Vista de Carrito
 Mostrar los teléfonos añadidos al carrito, con:
 
-[-] Imagen, nombre, especificaciones seleccionadas (almacenamiento / color) y precio
+[X] Imagen, nombre, especificaciones seleccionadas (almacenamiento / color) y precio
 individual.
 
-[-] Implementar un botón para eliminar productos individuales del carrito.
+[X] Implementar un botón para eliminar productos individuales del carrito.
 
-[-] Mostrar el precio total de la compra.
+[X] Mostrar el precio total de la compra.
 
-[-] Un botón de "Continuar comprando" que redirija a la vista principal.
+[X] Un botón de "Continuar comprando" que redirija a la vista principal.
 
-## Testing, Optimización y Documentación
 
 ## STACK TECNOLOGICO
-- Frontend: React >= 17, CSS, SASS o StyledComponents.
-- Backend: Node 18.
+- Frontend: React 18 y CSS
 - Gestión de Estado: React Context API.
 - Autenticación: Manejo del parámetro x-api-key en las peticiones.
