@@ -10,6 +10,7 @@
   border: 0;
   color: #999;
   font-size: 1rem;
+  outline: none;
 }
 .searchContainer input::placeholder {
   color: #999;

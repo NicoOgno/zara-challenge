@@ -16,6 +16,11 @@
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   padding-bottom: 10px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
 
 .carouselItem {
